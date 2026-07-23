@@ -37,8 +37,9 @@
     },
     "assets": {
       "host01": [
-        { "file": "orders-service/**/*.*", "target": "/root/assets/orders-service" },
-        { "file": "nginx/**/*.*", "target": "/root/assets/nginx" }
+        { "file": "orders-service/Dockerfile", "target": "/root/assets/orders-service" },
+        { "file": "orders-service/app.py", "target": "/root/assets/orders-service" },
+        { "file": "nginx/nginx.conf", "target": "/root/assets/nginx" }
       ]
     }
   },
