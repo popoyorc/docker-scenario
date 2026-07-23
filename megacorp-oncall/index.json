@@ -1,0 +1,48 @@
+{
+  "title": "MegaCorp On-Call: The Cascading Incident",
+  "description": "A day-2 operations troubleshooting scenario for engineers who just learned Docker fundamentals. One deploy, five cascading alerts -- fix them one at a time.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "1. The Silent Container",
+        "text": "step1.md",
+        "verify": "verify1.sh"
+      },
+      {
+        "title": "2. Unreachable Port",
+        "text": "step2.md",
+        "verify": "verify2.sh"
+      },
+      {
+        "title": "3. The 502 Load Balancer",
+        "text": "step3.md",
+        "verify": "verify3.sh"
+      },
+      {
+        "title": "4. The Vanishing Data",
+        "text": "step4.md",
+        "verify": "verify4.sh"
+      },
+      {
+        "title": "5. The Resource Hog",
+        "text": "step5.md",
+        "verify": "verify5.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        { "file": "orders-service/**/*.*", "target": "/root/assets/orders-service" },
+        { "file": "nginx/**/*.*", "target": "/root/assets/nginx" }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
