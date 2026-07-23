@@ -1,0 +1,16 @@
+{
+  "title": "Docker in the Real World: The MegaCorp Journey",
+  "description": "A guided, hands-on tour of how Docker is actually used inside a large-scale company -- from a developer's first container, through legacy app containment, image best practices, and scaling a service like a real fleet.",
+  "details": {
+    "intro": { "text": "intro.md" },
+    "steps": [
+      { "title": "1. Glimpse -- Your First Container", "text": "step1.md", "verify": "step1-verify.sh" },
+      { "title": "2. Real World -- Legacy & Modern, Side by Side", "text": "step2.md", "verify": "step2-verify.sh" },
+      { "title": "3. Best Practices -- Fixing a Bloated Image", "text": "step3.md", "verify": "step3-verify.sh" },
+      { "title": "4. Large Scale -- Scaling a Service Like a Fleet", "text": "step4.md", "verify": "step4-verify.sh" },
+      { "title": "5. Facilitate -- Fix the Broken Deployment", "text": "step5.md", "verify": "step5-verify.sh" }
+    ],
+    "finish": { "text": "finish.md" }
+  },
+  "backend": { "imageid": "docker" }
+}

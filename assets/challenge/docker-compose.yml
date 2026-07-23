@@ -1,0 +1,26 @@
+version: "3.9"
+# BROKEN ON PURPOSE -- find and fix the bug(s)!
+# Hint: check the api port mapping, and check which network each service is on.
+
+services:
+  api:
+    build: ./api
+    ports:
+      - "9090:9999"   # <-- api actually listens on 5000, not 9999
+    networks:
+      - frontend
+
+  lb:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - api
+    networks:
+      - backend       # <-- lb can't reach api if they're not on the same network
+
+networks:
+  frontend:
+  backend:
